@@ -22,6 +22,7 @@ body {
     background: none;
 }
 
+/* Page 1 Styles */
 .page1 {
     width: 100%;
     height: 100vh;
@@ -61,22 +62,23 @@ body {
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
+
+/* Navbar Styles */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 15px 30px !important;
     background-color: var(--primary-color);
     width: 100%;
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     z-index: 1000;
 }
-
 .logo {
     font-size: 1.5rem;
-    color: white;
+    color: var(--text-color);
 }
 
 .nav-links {
@@ -104,35 +106,72 @@ body {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
 }
-.cart-icon {
+.navbar .cart-icon {
     position: relative;
-    font-size: 24px;
-    z-index: 1001;
-    position: relative;
-    color: black !important; 
-    cursor: pointer;
-    margin-left: 20px;
-    transition: transform 0.3s ease;
-}
-
-.cart-icon:hover {
-    transform: scale(1.2);
-}
-.cart-count {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: red;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
 }
+.navbar .cart-icon:hover {
+    transform: scale(1.2);
+}
+
+.navbar .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: var(--text-color);
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 12px;
+}
+.cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none; /* مخفي بشكل افتراضي */
+    z-index: 1000;
+}
+
+.cart-dropdown .cart-items {
+    padding: 10px;
+}
+
+.cart-dropdown .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-dropdown .cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-dropdown .cart-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.cart-icon:hover .cart-dropdown {
+    display: block; /* عرض القائمة عند التحويم */
+}
+/* Search Container Styles */
 .search-container {
     width: 60%;
     height: 70px;
@@ -181,6 +220,7 @@ body {
     flex: 1;
 }
 
+/* Page 2 Styles */
 .page2 {
     padding: 20px;
     background-color: var(--bg-light);
@@ -195,6 +235,7 @@ h2 {
 
 .card {
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .card:hover {
@@ -205,6 +246,30 @@ h2 {
 .card img {
     height: 200px;
     object-fit: cover;
+}
+
+.card:hover .cart-icon {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.card .cart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .countdown div {
@@ -227,6 +292,7 @@ h2 {
     font-weight: bold;
     text-align: center;
 }
+
 .owner {
     font-size: 16px;
     font-weight: bold;
@@ -244,31 +310,8 @@ h2 {
     margin-top: 10px;
     border: 1px solid #ffd966;
 }
-.cart-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 18px;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.card:hover .cart-icon {
-    opacity: 1;
-    transform: scale(1.2);
-}
-.card {
-    position: relative;
-}
+
+/* More Button Styles */
 .more {
     display: flex;
     justify-content: center;
@@ -293,6 +336,7 @@ h2 {
     transform: scale(1.05);
 }
 
+/* Footer Styles */
 .footer {
     background-color: var(--footer-bg);
     color: var(--text-color);
@@ -355,4 +399,68 @@ h2 {
 
 .copyright a:hover {
     text-decoration: underline;
+}
+/* Media Query للشاشات الصغيرة (أقل من 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        padding-inline: 20px !important; 
+    }
+    .page1 h5 {
+        font-size: 1.2rem; 
+        text-align: center;
+    }
+
+    .search-container {
+        width: 90%; 
+        flex-direction: column-reverse;
+        height: auto; 
+        padding: 15px; 
+    }
+
+    .search-container #cities,
+    .search-container #Auction,
+    .search-container .input-box {
+        width: 100%; 
+        margin-bottom: 10px; 
+        text-align: center;
+    }
+    .search-container .input-box{
+        width: 20%; 
+    }
+
+    .search-btn {
+        width: 100%; 
+    }
+}
+/* Media Query للشاشات الصغيرة جدًا (أقل من 480px) */
+@media (max-width: 480px) {
+    .page1 h1 {
+        font-size: 1.5rem; 
+    }
+
+    .page1 h5 {
+        font-size: 1rem;
+    }
+
+    .search-container {
+        width: 100%; 
+    }
+
+    h2 {
+        font-size: 1.2rem; 
+    }
+
+    .card img {
+        height: 120px; 
+    }
+
+    .countdown div {
+        padding: 3px; 
+        font-size: 12px; 
+    }
+
+    .price, .owner {
+        font-size: 12px;
+    }
+
 }
