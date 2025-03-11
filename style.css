@@ -61,7 +61,6 @@ body {
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
-
 .navbar {
     display: flex;
     align-items: center;
@@ -73,23 +72,18 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    margin: 0;
 }
 
 .logo {
     font-size: 1.5rem;
-    color: var(--text-color);
-    margin: 0;
+    color: white;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    align-items: center;
-    display: flex;
-    align-items: center; 
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
@@ -109,9 +103,36 @@ body {
 .nav-links a:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
-    text-decoration: underline;
+}
+.cart-icon {
+    position: relative;
+    font-size: 24px;
+    z-index: 1001;
+    position: relative;
+    color: black !important; 
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
 }
 
+.cart-icon:hover {
+    transform: scale(1.2);
+}
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .search-container {
     width: 60%;
     height: 70px;
@@ -206,7 +227,48 @@ h2 {
     font-weight: bold;
     text-align: center;
 }
+.owner {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
 
+.admin-alert {
+    background-color: #ffeeba;
+    color: #856404;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    border: 1px solid #ffd966;
+}
+.cart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card:hover .cart-icon {
+    opacity: 1;
+    transform: scale(1.2);
+}
+.card {
+    position: relative;
+}
 .more {
     display: flex;
     justify-content: center;
