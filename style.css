@@ -202,6 +202,7 @@ body {
     margin: 0 5px;
 }
 .burger-menu {
+    display: none;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
