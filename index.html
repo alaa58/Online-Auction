@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>مزاد اونلاين</title>
+        <link rel="stylesheet" href="style.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div style="color: white;" class="logo">مزاد اونلاين</div>
+                <ul class="nav-links">
+                    <li><a href="#footer">تواصل معنا</a></li>
+                    <li><a href="#page2">المزادات</a></li>
+                    <li><a href="#">الرئيسية</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="page1" id="page1">
+                <h1>تبحث عن مزاد؟</h1>
+                <h5>تتيح منصة المزاد الإلكتروني فرصة مشاركة المزايدين في
+                    المزادات الإلكترونية من مختلف المناطق</h5>
+
+                <div class="search-container">
+                    <button class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i> بحث
+                    </button>
+
+                    <div class="dropdown">
+                        <select id="cities">
+                            <option value disabled selected>اختر
+                                المدينة</option>
+                            <option value="makka">مكة</option>
+                            <option value="almadena">المدينة</option>
+                            <option value="aldamam">الدمام</option>
+                            <option value="jada">جدة</option>
+                        </select>
+                    </div>
+
+                    <div class="dropdown">
+                        <select id="Auction">
+                            <option value disabled selected>اختر نوع
+                                المزاد</option>
+                            <option value="build">عقارات</option>
+                            <option value="car">سيارات</option>
+                            <option value="phone">موبايلات</option>
+                        </select>
+                    </div>
+
+                    <input type="text" class="input-box"
+                        placeholder="اسم المزاد">
+                </div>
+            </div>
+            <div class="page2" id="page2">
+                <h2>"احدث المازادات"</h2>
+                <div class="container mt-4">
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <!-- كارت 1 -->
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./images/build.webp"
+                                    class="card-img-top" alt="صورة المزاد">
+                                <div class="card-body">
+                                    <span class="badge bg-success">مزاد
+                                        قادم</span>
+                                    <h5 class="card-title mt-2">موقع رقم 2</h5>
+                                    <div class="countdown-container">
+                                        <p>يبدأ المزاد بعد:</p>
+                                        <div class="countdown">
+                                            <div>1 يوم</div>
+                                            <div>12 ساعة</div>
+                                            <div>10 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <p class="price mt-3">السعر الافتتاحي:
+                                        <span>1 ريال</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- كارت 2 -->
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./images/car.jpeg"
+                                    class="card-img-top" alt="صورة المزاد">
+                                <div class="card-body">
+                                    <span class="badge bg-success">مزاد
+                                        قادم</span>
+                                    <h5 class="card-title mt-2">موقع رقم 1</h5>
+                                    <div class="countdown-container">
+                                        <p>يبدأ المزاد بعد:</p>
+                                        <div class="countdown">
+                                            <div>1 يوم</div>
+                                            <div>10 ساعة</div>
+                                            <div>10 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <p class="price mt-3">السعر الافتتاحي:
+                                        <span>1 ريال</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- كارت 3 -->
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./images/mobile2.jpeg"
+                                    class="card-img-top" alt="صورة المزاد">
+                                <div class="card-body">
+                                    <span class="badge bg-success">مزاد
+                                        قادم</span>
+                                    <h5 class="card-title mt-2">موقع رقم 12</h5>
+                                    <div class="countdown-container">
+                                        <p>يبدأ المزاد بعد:</p>
+                                        <div class="countdown">
+                                            <div>1 يوم</div>
+                                            <div>08 ساعة</div>
+                                            <div>10 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <p class="price mt-3">السعر الافتتاحي:
+                                        <span>1 ريال</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- كارت 4 -->
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./images/car2.jpeg"
+                                    class="card-img-top" alt="صورة المزاد">
+                                <div class="card-body">
+                                    <span class="badge bg-success">مزاد
+                                        قادم</span>
+                                    <h5 class="card-title mt-2">موقع رقم 5</h5>
+                                    <div class="countdown-container">
+                                        <p>يبدأ المزاد بعد:</p>
+                                        <div class="countdown">
+                                            <div>1 يوم</div>
+                                            <div>06 ساعة</div>
+                                            <div>10 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <p class="price mt-3">السعر الافتتاحي:
+                                        <span>1 ريال</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- كارت 5 -->
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./images/build1.jpeg"
+                                    class="card-img-top" alt="صورة المزاد">
+                                <div class="card-body">
+                                    <span class="badge bg-success">مزاد
+                                        قادم</span>
+                                    <h5 class="card-title mt-2">موقع رقم 6</h5>
+                                    <div class="countdown-container">
+                                        <p>يبدأ المزاد بعد:</p>
+                                        <div class="countdown">
+                                            <div>1 يوم</div>
+                                            <div>04 ساعة</div>
+                                            <div>10 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <p class="price mt-3">السعر الافتتاحي:
+                                        <span>1 ريال</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- كارت 6 -->
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./images/build3.jpeg"
+                                    class="card-img-top" alt="صورة المزاد">
+                                <div class="card-body">
+                                    <span class="badge bg-success">مزاد
+                                        قادم</span>
+                                    <h5 class="card-title mt-2">موقع رقم 6</h5>
+                                    <div class="countdown-container">
+                                        <p>يبدأ المزاد بعد:</p>
+                                        <div class="countdown">
+                                            <div>1 يوم</div>
+                                            <div>04 ساعة</div>
+                                            <div>10 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <p class="price mt-3">السعر الافتتاحي:
+                                        <span>1 ريال</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- كارت 7 -->
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./images/car3.jpeg"
+                                    class="card-img-top" alt="صورة المزاد">
+                                <div class="card-body">
+                                    <span class="badge bg-success">مزاد
+                                        قادم</span>
+                                    <h5 class="card-title mt-2">موقع رقم 6</h5>
+                                    <div class="countdown-container">
+                                        <p>يبدأ المزاد بعد:</p>
+                                        <div class="countdown">
+                                            <div>1 يوم</div>
+                                            <div>04 ساعة</div>
+                                            <div>10 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <p class="price mt-3">السعر الافتتاحي:
+                                        <span>1 ريال</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- كارت 8 -->
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="./images/mobile1.jpeg"
+                                    class="card-img-top" alt="صورة المزاد">
+                                <div class="card-body">
+                                    <span class="badge bg-success">مزاد
+                                        قادم</span>
+                                    <h5 class="card-title mt-2">موقع رقم 6</h5>
+                                    <div class="countdown-container">
+                                        <p>يبدأ المزاد بعد:</p>
+                                        <div class="countdown">
+                                            <div>1 يوم</div>
+                                            <div>04 ساعة</div>
+                                            <div>10 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <p class="price mt-3">السعر الافتتاحي:
+                                        <span>1 ريال</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <button class="btn more-btn">عرض المزيد</button>
+            </div>
+            <footer id="footer" class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <h4 class="footer-logo">مزاد اونلاين</h4>
+                            <p>نقدم لك أفضل الخدمات بأعلى جودة واحترافية.</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h5>روابط سريعة</h5>
+                            <ul class="footer-links">
+                                <li><a href="#">الرئيسية</a></li>
+                                <li><a href="#">من نحن</a></li>
+                                <li><a href="#">الخدمات</a></li>
+                                <li><a href="#">اتصل بنا</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <h5>تابعنا على</h5>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p>© 2025 جميع الحقوق محفوظة | <a href="#">مزاد
+                                اونلاين</a></p>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
