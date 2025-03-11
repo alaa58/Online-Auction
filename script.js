@@ -1,4 +1,4 @@
-const images = ["images/build3.jpeg", "images/car4.jpeg", "images/phone.jpeg"]; 
+const images = ["images/auction.jpg", "images/newCar.jpg", "images/newBuild1.jpg"]; 
 let index = 0;
 
 function changeBackground() {
